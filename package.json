@@ -1,0 +1,35 @@
+{
+  "name": "e-vaccin",
+  "version": "2.0.0",
+  "description": "Plateforme de gestion des vaccinations - Sénégal",
+  "type": "module",
+  "main": "main.jsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .jsx,.js",
+    "format": "prettier --write src/",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^4.4.0",
+    "eslint": "^8.40.0",
+    "prettier": "^3.0.0",
+    "vitest": "^0.34.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

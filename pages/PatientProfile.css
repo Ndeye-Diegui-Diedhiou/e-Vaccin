@@ -1,0 +1,308 @@
+/* Patient Profile Page Styles */
+
+.patient-profile {
+  min-height: 100vh;
+  background: var(--gray-50, #F5F8FF);
+  padding: 2rem;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.profile-back {
+  display: flex;
+}
+
+.back-btn {
+  background: white;
+  border: 1.5px solid var(--gray-100, #EAF0F8);
+  color: var(--blue-700, #185FA5);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--r-md, 8px);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background: var(--blue-50, #E6F1FB);
+  border-color: var(--blue-400, #378ADD);
+}
+
+.profile-header h1 {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--gray-900, #0D1B2E);
+  flex: 1;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Profile Cards */
+.profile-card {
+  background: white;
+  border: 1.5px solid var(--gray-100, #EAF0F8);
+  border-radius: var(--r-lg, 16px);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Patient Info Header */
+.patient-info-header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--gray-100, #EAF0F8);
+}
+
+.patient-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue-700, #185FA5), var(--blue-400, #378ADD));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Sora', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+
+.patient-info-header h2 {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gray-900, #0D1B2E);
+  margin-bottom: 0.25rem;
+}
+
+.patient-meta {
+  font-size: 0.9rem;
+  color: var(--gray-400, #7A8FA6);
+}
+
+/* Patient Info Grid */
+.patient-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.info-label {
+  font-size: 0.8rem;
+  color: var(--gray-400, #7A8FA6);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.info-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-900, #0D1B2E);
+}
+
+/* Section Title */
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.section-title h3 {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--gray-900, #0D1B2E);
+}
+
+/* Vaccines List */
+.vaccines-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vaccine-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--gray-50, #F5F8FF);
+  border: 1px solid var(--gray-100, #EAF0F8);
+  border-radius: var(--r-md, 8px);
+  transition: all 0.2s ease;
+}
+
+.vaccine-item:hover {
+  border-color: var(--blue-200, #85B7EB);
+  background: var(--blue-50, #E6F1FB);
+}
+
+.vaccine-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.vaccine-details {
+  flex: 1;
+}
+
+.vaccine-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gray-900, #0D1B2E);
+  margin-bottom: 0.4rem;
+}
+
+.vaccine-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--gray-400, #7A8FA6);
+  flex-wrap: wrap;
+}
+
+.vaccine-meta span::before {
+  content: "";
+  display: inline-block;
+}
+
+.vaccine-meta span:not(:first-child)::before {
+  content: "•";
+  margin-right: 0.5rem;
+}
+
+.vaccine-badge {
+  background: #EAF3DE;
+  color: #3B6D11;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--r-md, 8px);
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Next Vaccines */
+.next-vaccines {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.next-vaccine-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, rgba(55, 138, 221, 0.05), rgba(181, 212, 244, 0.1));
+  border: 1.5px solid rgba(24, 95, 165, 0.1);
+  border-radius: var(--r-md, 8px);
+}
+
+.next-vaccine-check {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.next-vaccine-info {
+  flex: 1;
+}
+
+.next-vaccine-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gray-900, #0D1B2E);
+  margin-bottom: 0.3rem;
+}
+
+.next-vaccine-date {
+  font-size: 0.85rem;
+  color: var(--gray-400, #7A8FA6);
+}
+
+/* Form Field */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--gray-700, #3A4F63);
+}
+
+.form-input {
+  padding: 0.85rem 1rem;
+  border: 1.5px solid var(--gray-200, #C8D6E8);
+  border-radius: var(--r-md, 8px);
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.form-input::placeholder {
+  color: var(--gray-300, #C8D6E8);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--blue-400, #378ADD);
+  box-shadow: 0 0 0 3px rgba(55, 138, 221, 0.1);
+}
+
+@media (max-width: 768px) {
+  .patient-profile {
+    padding: 1rem;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .profile-header h1 {
+    text-align: center;
+  }
+
+  .patient-info-header {
+    flex-direction: column;
+  }
+
+  .patient-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .next-vaccine-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
