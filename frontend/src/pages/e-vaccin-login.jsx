@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./e-vaccin-login.css";
-import { useForm } from "./hooks/useForm";
+import { useForm } from "../hooks/useForm";
 
 /* ── Icônes SVG inline ── */
 const Icon = {
@@ -81,7 +81,7 @@ function validatePassword(v) {
 }
 
 /* ── Composant principal ── */
-export default function EVaccinLogin() {
+export default function EVaccinLogin({ onLoginSuccess = () => {} }) {
   const [role, setRole] = useState("agent");
   const [remember, setRemember] = useState(false);
   const [apiError, setApiError] = useState(null);
@@ -95,9 +95,9 @@ export default function EVaccinLogin() {
         await new Promise(r => setTimeout(r, 1200));
         
         if (values.email === "admin@evaccin.sn" && values.password === "demo123") {
-          // Succès
+          // Succès - call the callback to navigate
           console.log("Login successful for:", values.email, "with role:", role);
-          // Ici, redirection vers le dashboard
+          onLoginSuccess();
         } else {
           throw new Error("Identifiants invalides. Essayez admin@evaccin.sn / demo123");
         }

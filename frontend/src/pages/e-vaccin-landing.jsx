@@ -84,7 +84,7 @@ function FeatureCard({ icon, title, desc }) {
 }
 
 /* ── Page principale ── */
-export default function EVaccinLanding() {
+export default function EVaccinLanding({ onLoginClick = () => {} }) {
   const [scrolled, setScrolled]       = useState(false);
   const [statsActive, setStatsActive] = useState(false);
   const statsRef = useRef(null);
@@ -120,8 +120,8 @@ export default function EVaccinLanding() {
           </nav>
 
           <div className="ev-nav-actions">
-            <button className="ev-btn-login">Connexion</button>
-            <button className="ev-btn-start">Démarrer</button>
+            <button className="ev-btn-login" onClick={onLoginClick}>Connexion</button>
+            <button className="ev-btn-start" onClick={onLoginClick}>Démarrer</button>
           </div>
         </div>
       </header>
@@ -148,8 +148,8 @@ export default function EVaccinLanding() {
           </p>
 
           <div className="ev-hero-cta">
-            <button className="ev-btn-hero-primary">Accéder à la plateforme</button>
-            <button className="ev-btn-hero-ghost">Voir la démo</button>
+            <button className="ev-btn-hero-primary" onClick={onLoginClick}>Accéder à la plateforme</button>
+            <button className="ev-btn-hero-ghost" onClick={onLoginClick}>Voir la démo</button>
           </div>
 
           <div className="ev-hero-trust">
